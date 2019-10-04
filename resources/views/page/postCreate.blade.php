@@ -26,7 +26,7 @@
         <input type="text" name="author" value="" placeholder="Insert author">
       </div>
 
-      <button type="submit">Save</button>
+      <button type="submit">SAVE</button>
     </form>
   </div>
 @endsection

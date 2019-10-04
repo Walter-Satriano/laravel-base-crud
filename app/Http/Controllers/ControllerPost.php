@@ -36,7 +36,15 @@ class ControllerPost extends Controller
   */
   public function store(Request $request)
   {
-    //
+    $validatedData = $request -> validate([
+
+      "title" => "required",
+      "description" => "required",
+      "author" => "required"
+    ]);
+
+    $post = Post::create($validatedData);
+    return redirect("/postIndex");
   }
 
   /**

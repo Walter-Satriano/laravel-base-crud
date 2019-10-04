@@ -6,7 +6,7 @@
     <a href="{{ route("post.index") }}">BACK</a>
   </div>
 
-  <form class="create_form" method="post" action="">
+  <form class="create_form" method="post" action="{{ route("post.store")}}">
 
       @csrf
       @method('POST')

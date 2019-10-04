@@ -13,8 +13,8 @@
         <h3>{{ $post -> title}}</h3>
         <p>{{ $post -> description }}</p>
         <h4>{{ $post -> author }}</h4>
-        <a href="{{ route("post.edit", $post -> id) }}">UPDATE</a>
-        <a href="{{ route("post.destroy", $post -> id) }}">DESTROY</a>
+        <a class="update_link" href="{{ route("post.edit", $post -> id) }}">UPDATE</a>
+        <a class="destroy_link" href="{{ route("post.destroy", $post -> id) }}">DESTROY</a>
       </div>
     @endforeach
   </div>

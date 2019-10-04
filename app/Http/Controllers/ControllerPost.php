@@ -66,7 +66,9 @@ class ControllerPost extends Controller
   */
   public function edit($id)
   {
-    //
+    $post = Post::findOrFail($id);
+
+    return view("page.postEdit", compact("post"));
   }
 
   /**
@@ -78,7 +80,15 @@ class ControllerPost extends Controller
   */
   public function update(Request $request, $id)
   {
-    //
+    $validatedData = $request -> validate([
+
+      "title" => "required",
+      "description" => "required",
+      "author" => "required"
+    ]);
+
+    Post::whereId($id) -> update($validatedData);
+    return redirect("/postIndex");
   }
 
   /**

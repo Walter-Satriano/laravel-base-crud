@@ -14,7 +14,7 @@
         <p>{{ $post -> description }}</p>
         <h4>{{ $post -> author }}</h4>
         <a href="{{ route("post.edit", $post -> id) }}">UPDATE</a>
-        <a href="#">DESTROY</a>
+        <a href="{{ route("post.destroy", $post -> id) }}">DESTROY</a>
       </div>
     @endforeach
   </div>
